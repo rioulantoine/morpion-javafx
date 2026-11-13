@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="357.0" prefWidth="503.0" styleClass="FondDegrade" stylesheets="@GameStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.td2.MorpionController">
+   <children>
+      <HBox alignment="CENTER" prefHeight="75.0" prefWidth="574.0">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="239.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@TicTacToeTitle.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" prefHeight="260.0" prefWidth="600.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="201.0" prefWidth="600.0" spacing="25.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#ChangementScence" prefHeight="50.0" prefWidth="291.0" stylesheets="@style.css" text="Jouer">
+                     <textFill>
+                        <LinearGradient endX="0.9004739336492891" endY="0.4881516587677725" startX="1.0" startY="0.957345971563981">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color red="0.9736841917037964" green="0.031554579734802246" blue="0.031554579734802246" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </LinearGradient>
+                     </textFill>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#CreditsScene" prefHeight="50.0" prefWidth="291.0" stylesheets="@style.css" text="Crédits" />
+                  <Button mnemonicParsing="false" onAction="#exit" prefHeight="50.0" prefWidth="291.0" stylesheets="@style.css" text="Quitter" />
+                  <Pane prefHeight="8.0" prefWidth="600.0" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>

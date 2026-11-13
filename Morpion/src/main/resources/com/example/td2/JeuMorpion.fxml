@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="499.0" prefWidth="600.0" stylesheets="@GameStyle.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.td2.ControllerEnJeu">
+   <center>
+      <GridPane alignment="CENTER" prefHeight="334.0" prefWidth="400.0" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button id="GameButton" fx:id="button00" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="111.0" prefWidth="147.0" styleClass="GameButton" stylesheets="@style.css" />
+            <Button id="GameButton" fx:id="button01" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="111.0" prefWidth="143.0" styleClass="GameButton" stylesheets="@style.css" GridPane.columnIndex="1" />
+            <Button id="GameButton" fx:id="button02" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="114.0" prefWidth="147.0" styleClass="GameButton" stylesheets="@style.css" GridPane.columnIndex="2" />
+            <Button id="GameButton" fx:id="button10" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="119.0" prefWidth="144.0" styleClass="GameButton" stylesheets="@style.css" GridPane.rowIndex="1" />
+            <Button id="GameButton" fx:id="button11" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="111.0" prefWidth="135.0" styleClass="GameButton" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Button id="GameButton" fx:id="button12" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="106.0" prefWidth="149.0" styleClass="GameButton" stylesheets="@style.css" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <Button id="GameButton" fx:id="button20" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="186.0" prefWidth="246.0" styleClass="GameButton" stylesheets="@style.css" GridPane.rowIndex="2" />
+            <Button id="GameButton" fx:id="button21" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="114.0" prefWidth="133.0" styleClass="GameButton" stylesheets="@style.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Button id="GameButton" fx:id="button22" mnemonicParsing="false" onAction="#boutonClicked" prefHeight="105.0" prefWidth="142.0" styleClass="GameButton" stylesheets="@style.css" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+   </center>
+   <top>
+      <HBox alignment="CENTER" prefHeight="82.0" prefWidth="600.0" spacing="30.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button id="Button" mnemonicParsing="false" onAction="#reinitialiserPartie" prefWidth="150.0" stylesheets="@GameStyle.css" text="Réinitialiser" />
+            <Button id="Button" mnemonicParsing="false" onAction="#regles" prefWidth="150.0" stylesheets="@GameStyle.css" text="Règles" />
+            <Button id="Button" mnemonicParsing="false" onAction="#quitterPartie" prefWidth="150.0" stylesheets="@GameStyle.css" text="Quitter la partie" />
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="label" fx:id="labelPlayer1" stylesheets="@GameStyle.css" text="Joueur 1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label id="X" styleClass="X" stylesheets="@GameStyle.css" text="X" textFill="RED">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </left>
+   <right>
+      <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label id="label" fx:id="labelPlayer2" stylesheets="@GameStyle.css" text="Joueur 2">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label id="O" styleClass="O" stylesheets="@GameStyle.css" text="O" textFill="#3b42ff">
+               <font>
+                  <Font name="System Bold" size="16.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+   </right>
+   <bottom>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Button mnemonicParsing="false" onAction="#AfficheScore" text="Scores">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Label id="labeltourplayer" fx:id="labelTourPlayer" stylesheets="@GameStyle.css" text="C'est au tour de : Joueur 1">
+               <font>
+                  <Font size="18.0" />
+               </font>
+               <padding>
+                  <Insets left="15.0" />
+               </padding>
+            </Label>
+         </children>
+      </HBox>
+   </bottom>
+</BorderPane>

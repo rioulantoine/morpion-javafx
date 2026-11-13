@@ -1,0 +1,143 @@
+/* Style général */
+.root {
+    -fx-background-color: #1e1e2f;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+}
+
+/* Fond général */
+.FonduBackground {
+    -fx-background-color: linear-gradient(from 0% 0% to 100% 100%, #00B4D8, #0077B6);
+    -fx-background-radius: 20;
+    -fx-padding: 20;
+}
+
+/* Boutons du jeu */
+.GameButton {
+    -fx-background-color: linear-gradient(to bottom right, #292942, #3a3a5c);
+    -fx-border-color: #00ffff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-font-size: 36px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #cccccc; /* couleur par défaut neutre */
+    -fx-effect: dropshadow(gaussian, #00ffff44, 6, 0.4, 0, 0);
+    -fx-alignment: center;
+}
+
+/* Hover et Pressed */
+.GameButton:hover {
+    -fx-background-color: linear-gradient(to bottom right, #3a3a5c, #50507a);
+    -fx-effect: dropshadow(gaussian, #00ffffcc, 12, 0.6, 0, 0);
+}
+.GameButton:pressed {
+    -fx-background-color: linear-gradient(to bottom right, #1b1b2f, #2c2c48);
+}
+
+/* Boutons top (Réinitialiser, etc.) */
+.button {
+    -fx-background-color: linear-gradient(to right, #252538, #343454);
+    -fx-text-fill: white;
+    -fx-border-color: #5555ff;
+    -fx-border-width: 2px;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #5555ffaa, 8, 0.4, 0, 0);
+}
+.button:hover {
+    -fx-background-color: linear-gradient(to right, #343454, #454578);
+}
+.button:pressed {
+    -fx-background-color: linear-gradient(to right, #1e1e33, #2e2e4a);
+}
+
+/* Labels généraux */
+.label {
+    -fx-text-fill: #dddddd;
+    -fx-font-size: 16px;
+}
+
+/* Label tour du joueur */
+#labelTourPlayer {
+    -fx-text-fill: #00ff99;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Style des joueurs sur les côtés */
+#labelPlayer1 {
+    -fx-text-fill: #ff4444;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+#labelPlayer2 {
+    -fx-text-fill: #3b42ff;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Styliser les X et O sur les boutons après clic (via style dynamique dans Java) */
+.X{
+    -fx-font-size: 25px;
+    -fx-text-fill: #ff4444;
+    -fx-effect: dropshadow(gaussian, #ff444488, 8, 0.6, 0, 0);
+}
+.O {
+    -fx-font-size: 25px;
+    -fx-text-fill: #3b42ff;
+    -fx-effect: dropshadow(gaussian, #3b42ff88, 8, 0.6, 0, 0);
+}
+
+.TicTacToeTitle{
+        -fx-text-fill: white;
+        -fx-font-size: 42px;
+        -fx-font-family: "Segoe UI Black", "Arial Black", sans-serif;
+        -fx-font-weight: bold;
+        -fx-effect: dropshadow(gaussian, #00ffff88, 12, 0.6, 0, 2);
+        -fx-alignment: center;
+        -fx-padding: 30 0 10 0;
+        -fx-background-color: transparent;
+        -fx-background-insets: 0;
+}
+
+
+.FondDegrade{
+    -fx-background-color: linear-gradient(to bottom, #1e1e2f, #2a2a40, #3a3a55, #4a4a6a);
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+}
+.TextePrincipale{
+    -fx-font-size: 10px;
+    -fx-text-fill: White;
+    -fx-font-family: "Arial", sans-serif;
+}
+
+.TitleSecondaire{
+        -fx-text-fill: white;
+        -fx-font-size: 32px;
+        -fx-font-family: "Segoe UI Black", "Arial Black", sans-serif;
+        -fx-font-weight: bold;
+        -fx-effect: dropshadow(gaussian, #00ffff88, 12, 0.6, 0, 2);
+        -fx-alignment: center;
+        -fx-padding: 30 0 10 0;
+        -fx-background-color: transparent;
+        -fx-background-insets: 0;
+}
+.PetitTitre{
+    -fx-text-fill: white;
+    -fx-font-size: 18px;
+    -fx-font-family: "Segoe UI Semibold", "Arial", sans-serif;
+    -fx-font-weight: normal;
+    -fx-effect: dropshadow(gaussian, #00ffff55, 8, 0.4, 0, 1);
+    -fx-alignment: center;
+    -fx-padding: 10 0 5 0;
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+}
+.TexteBlanc {
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-family: "Segoe UI", "Arial", sans-serif;
+    -fx-font-weight: normal;
+}
